@@ -1,24 +1,25 @@
-# Northwind-data-warehouse
-Designed and implemented an ETL pipeline using SQL Server Integration Services (SSIS) to build a Northwind Data Warehouse with dimensional modeling and fact/dimension tables.
-# 🚀 ETL Process using SSIS (Northwind Data Warehouse)
+# SSIS ETL Northwind Data Warehouse
 
-## 📖 Overview
+## Overview
 
-This project demonstrates the implementation of an ETL (Extract, Transform, Load) pipeline using SQL Server Integration Services (SSIS). Data from the Northwind transactional database is extracted, transformed, and loaded into a dimensional data warehouse to support analytical reporting.
+This project demonstrates the design and implementation of an ETL (Extract, Transform, Load) pipeline using SQL Server Integration Services (SSIS). The ETL process extracts transactional data from the Northwind database, applies data transformations, and loads it into a dimensional data warehouse optimized for business intelligence and analytical reporting.
 
----
-
-## 🎯 Objectives
-
-- Extract data from the Northwind database
-- Transform data using SSIS transformations
-- Build dimension tables
-- Create a FactOrders table
-- Load cleaned data into a SQL Server data warehouse
+The project follows dimensional modeling principles by creating dimension tables and a centralized fact table to support efficient querying and reporting.
 
 ---
 
-## 🛠 Technologies Used
+## Objectives
+
+- Build a dimensional data warehouse from the Northwind database.
+- Design and implement ETL workflows using SSIS.
+- Extract data from the source database.
+- Perform data cleansing and transformations.
+- Load data into dimension and fact tables.
+- Maintain referential integrity through foreign key relationships.
+
+---
+
+## Technologies Used
 
 - SQL Server
 - SQL Server Integration Services (SSIS)
@@ -26,35 +27,26 @@ This project demonstrates the implementation of an ETL (Extract, Transform, Load
 - Visual Studio
 - Data Warehousing
 - ETL
+- Dimensional Modeling
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 ```
-README.md
-Northwind_Create_Tables.sql
-Northwind_ETL.sql
-Integration Services Project.slnx
-Documentation/
-Screenshots/
+ssis-etl-northwind-data-warehouse
+│
+├── README.md
+├── Northwind_Create_Tables.sql
+├── Northwind_ETL.sql
+├── Northwind_ETL_Project.slnx
+├── ETL_Project_Report.pdf
+└── Screenshots
 ```
 
 ---
 
-## ⭐ Features
-
-- ETL pipeline using SSIS
-- Data cleaning using Derived Column transformation
-- Lookup transformations
-- Dimension table loading
-- Fact table creation
-- Foreign key relationships
-- SQL scripts for warehouse creation
-
----
-
-## 📊 Data Warehouse Components
+## Data Warehouse Design
 
 ### Dimension Tables
 
@@ -67,36 +59,94 @@ Screenshots/
 
 - FactOrders
 
----
-
-## 🔄 ETL Workflow
-
-1. Extract data from Northwind
-2. Apply transformations
-3. Clean data
-4. Perform lookups
-5. Load into Data Warehouse
+The fact table stores transactional measures while dimension tables provide descriptive attributes for analysis.
 
 ---
 
-## 📷 Screenshots
+## ETL Workflow
 
-(Add screenshots here)
+The ETL process consists of the following stages:
 
----
-
-## 📈 Future Improvements
-
-- Incremental ETL
-- SSIS logging
-- Error handling
-- SQL Server Agent Scheduling
-- Power BI Dashboard
+1. Extract data from the Northwind source database.
+2. Apply transformations using SSIS components.
+3. Clean and standardize data using Derived Column transformations.
+4. Perform Lookup transformations to establish relationships between dimension and fact tables.
+5. Load processed data into the SQL Server data warehouse.
 
 ---
 
-## 👩‍💻 Author
+## SSIS Components Used
 
-**Divyanshi Sharma**
+- OLE DB Source
+- Derived Column
+- Lookup Transformation
+- OLE DB Destination
+- Data Flow Task
+- Control Flow
+
+---
+
+## Key Features
+
+- End-to-end ETL pipeline implementation
+- SQL-based dimensional data warehouse
+- Fact and dimension table creation
+- Data cleansing and transformation
+- Lookup-based key mapping
+- Efficient loading into SQL Server
+- Structured data model for business intelligence
+
+---
+
+## Results
+
+- Successfully extracted data from the Northwind database.
+- Loaded cleaned and transformed data into the data warehouse.
+- Established relationships between dimension and fact tables.
+- Created a structured warehouse suitable for analytical reporting.
+
+---
+
+## Future Enhancements
+
+- Incremental ETL loading
+- SSIS package logging
+- Error handling and notifications
+- SQL Server Agent scheduling
+- Power BI integration for dashboard reporting
+
+---
+
+## How to Run
+
+1. Restore the Northwind database in SQL Server.
+2. Execute the SQL scripts to create the data warehouse schema.
+3. Open the SSIS solution in Visual Studio.
+4. Configure SQL Server connection managers.
+5. Execute the SSIS packages.
+6. Verify data loading using SQL queries.
+
+---
+
+## Repository Contents
+
+- SQL scripts for warehouse creation
+- SSIS project files
+- Project documentation
+- ETL workflow screenshots
+
+---
+
+## Author
+
+Divyanshi Sharma
 
 MBA (Artificial Intelligence & Data Science)
+
+Graphic Era Deemed to be University
+
+---
+
+## Academic Note
+
+This repository contains an academic ETL project developed as part of the MBA (Artificial Intelligence & Data Science) curriculum. It demonstrates practical implementation of data warehousing concepts using SQL Server Integration Services (SSIS) and SQL Server.
